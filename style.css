@@ -1,0 +1,42 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    max-width: 90%; 
+    max-height: 80vh; 
+    width: auto; 
+    height: auto; 
+    border: 3px solid #333;
+    border-radius: 8px;
+    transform: scaleX(-1); /* Flips the canvas horizontally */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+
+input[type="color"], input[type="checkbox"], label {
+    margin-top: 20px; 
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+@media (max-width: 600px) {
+    input[type="color"], input[type="checkbox"], label {
+        font-size: 14px; /* Slightly smaller text on small devices */
+    }
+}
+
+/* Additional styling for animations and visual transitions */
+@keyframes Gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
